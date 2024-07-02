@@ -1,6 +1,9 @@
+
 import Player from "./components/Players";
 import GameBoard from "./components/GameBoard";
 import { useState } from "react";
+import Player from "./components/Players"
+import GameBoard from "./components/GameBoard";
 function App() {
   
   const [activePlayer, setActivePlayer] = useState('X');
@@ -16,6 +19,8 @@ function App() {
           <Player intialName="player2" symbol="O" isActive = {activePlayer === 'O'}/>
         </ol>
          <GameBoard onSelectSquare={handleActivePlayer} activePlayerSymbol = {activePlayer} />
+         <GameBoard />
+
       </div>
       LOG
     </main>
