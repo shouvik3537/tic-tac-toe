@@ -1,8 +1,10 @@
+
 import Player from "./components/Players";
 import GameBoard from "./components/GameBoard";
 //import Player from "./components/Log";
 import { useState } from "react";
-
+import Player from "./components/Players"
+import GameBoard from "./components/GameBoard";
 function App() {
   
   const [activePlayer, setActivePlayer] = useState('X');
@@ -28,11 +30,16 @@ function App() {
           <Player intialName="player1" symbol="X" isActive = {activePlayer === 'X'}/>
           <Player intialName="player2" symbol="O" isActive = {activePlayer === 'O'}/>
         </ol>
+
          <GameBoard 
              onSelectSquare={handleActivePlayer} 
              //The game turns array we got is now been passed to GameBoard component.
              turns={gameTurns} 
              />
+
+         <GameBoard onSelectSquare={handleActivePlayer} activePlayerSymbol = {activePlayer} />
+         <GameBoard />
+
       </div>
     </main>
   );
