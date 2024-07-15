@@ -1,4 +1,5 @@
 
+
 export default function Log({turns}){
     return(
         <ol id="log">
@@ -10,3 +11,11 @@ export default function Log({turns}){
         </ol>
     );
 }
+
+// import {useState} from React;
+
+// export default function Log(){
+//     return(
+
+//     );
+// }
